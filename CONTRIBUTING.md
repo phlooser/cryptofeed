@@ -16,4 +16,4 @@ PRs, bug reports, feature requests, documentation, and other enhancements and im
 * Has it been tested? How?
 * Does the code style match the overall code style of the project? Long lines are preferred, so please do not use formatters that turn 1 line into 4 lines.
 * Please use type annotations.
-* Please run flake8 and fix any formatting issues it uncovers.
+* Please run ruff and fix any formatting issues it uncovers.

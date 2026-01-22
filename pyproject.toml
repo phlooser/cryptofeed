@@ -121,6 +121,12 @@ exclude = ["tests*"]
 [tool.setuptools.dynamic]
 readme = {file = ["README.md", "INSTALL.md", "CHANGES.md"], content-type = "text/markdown"}
 
+[tool.ruff]
+exclude = ["tests/*", "docs/*", "*.md", "__init__.py", "cryptofeed/exchanges.py"]
+
+[tool.ruff.lint]
+ignore = ["E501", "F405", "F403"]
+
 [tool.isort]
 # isort formats the import sections
 #
@@ -150,6 +156,6 @@ ensure_newline_before_comments = true
 
 [dependency-groups]
 dev = [
-    "flake8>=7.3.0",
+    "ruff>=0.9.0",
     "pytest",
 ]

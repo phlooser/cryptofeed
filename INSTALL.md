@@ -74,6 +74,12 @@ Alternatively, you can install in 'edit' mode (also called development mode):
 
     uv pip install -e .
 
+## Linting
+
+Run the linter from the repo root:
+
+    uv run ruff check .
+
 If you have a problem with the installation/hacking of Cryptofeed, you are welcome to:
 * open a new issue: https://github.com/bmoscon/cryptofeed/issues/
 * join us on Slack: [cryptofeed-dev.slack.com](https://join.slack.com/t/cryptofeed-dev/shared_invite/enQtNjY4ODIwODA1MzQ3LTIzMzY3Y2YxMGVhNmQ4YzFhYTc3ODU1MjQ5MDdmY2QyZjdhMGU5ZDFhZDlmMmYzOTUzOTdkYTZiOGUwNGIzYTk)

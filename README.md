@@ -167,7 +167,11 @@ Alternatively, you can install in 'edit' mode (also called development mode):
 
 See more discussion of package installation in [INSTALL.md](https://github.com/bmoscon/cryptofeed/blob/master/INSTALL.md).
 
+## Linting
 
+Run the linter from the repo root:
+
+    uv run ruff check .
 
 ## Rest API
 
