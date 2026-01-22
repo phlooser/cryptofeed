@@ -147,23 +147,23 @@ Supported Backends:
 
 ## Installation
 
-**Note:** cryptofeed requires Python 3.8+
+**Note:** cryptofeed requires Python 3.9+
 
 Cryptofeed can be installed from PyPi. (It's recommended that you install in a virtual environment of your choosing).
 
-    pip install cryptofeed
+    uv pip install cryptofeed
 
 Cryptofeed has optional dependencies, depending on the backends used. You can install them individually, or all at once. To install Cryptofeed along with all its optional dependencies in one bundle:
 
-    pip install cryptofeed[all]
+    uv pip install "cryptofeed[all]"
 
 If you wish to clone the repository and install from source, run this command from the root of the cloned repository.
 
-    python setup.py install
+    uv sync
 
 Alternatively, you can install in 'edit' mode (also called development mode):
 
-    python setup.py develop
+    uv pip install -e .
 
 See more discussion of package installation in [INSTALL.md](https://github.com/bmoscon/cryptofeed/blob/master/INSTALL.md).
 

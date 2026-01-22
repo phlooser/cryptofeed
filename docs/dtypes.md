@@ -3,7 +3,7 @@
 Cryptofeed uses custom data types when returning data to the client via callbacks. They are defined in [types.pyx](../cryptofeed/types.pyx). The use of these custom types allows for a few important things:
 
 1. Every callback knows exactly what to expect (what the data type is, what fields it contains, etc).
-2. The data objects can be configured to provide type checking on the fields (you need to build the library with this [line](https://github.com/bmoscon/cryptofeed/blob/master/setup.py#L40) in setup.py commented out).
+2. The data objects can be configured to provide type checking on the fields (you need to build the library with this line in [setup.py](https://github.com/bmoscon/cryptofeed/blob/master/setup.py) commented out).
 3. Adding new fields to a data type requires that all other exchanges be modified at the same time, or the build will fail.
 4. Fields are readonly, to prevent the client from accidentally modifying them.
 

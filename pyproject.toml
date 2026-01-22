@@ -1,3 +1,126 @@
+[project]
+name = "cryptofeed"
+version = "2.4.1"
+description = "Cryptocurrency Exchange Websocket Data Feed Handler"
+dynamic = ["readme"]
+license = {text = "XFree86"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Bryant Moscon", email = "bmoscon@gmail.com"},
+]
+maintainers = [
+    {name = "Bryant Moscon", email = "bmoscon@gmail.com"},
+]
+keywords = [
+    "cryptocurrency",
+    "bitcoin",
+    "btc",
+    "feed handler",
+    "market feed",
+    "market data",
+    "crypto assets",
+    "Trades",
+    "Tickers",
+    "BBO",
+    "Funding",
+    "Open Interest",
+    "Liquidation",
+    "Order book",
+    "Bid",
+    "Ask",
+    "fmfw.io",
+    "Bitfinex",
+    "bitFlyer",
+    "AscendEX",
+    "Bitstamp",
+    "Blockchain.com",
+    "Bybit",
+    "Binance",
+    "Binance Delivery",
+    "Binance Futures",
+    "Binance US",
+    "BitMEX",
+    "Coinbase",
+    "Deribit",
+    "EXX",
+    "Gate.io",
+    "Gemini",
+    "HitBTC",
+    "Huobi",
+    "Huobi DM",
+    "Huobi Swap",
+    "Kraken",
+    "Kraken Futures",
+    "OKCoin",
+    "OKX",
+    "Poloniex",
+    "ProBit",
+    "Upbit",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: AsyncIO",
+]
+dependencies = [
+    "requests>=2.18.4",
+    "websockets>=14.1",
+    "pyyaml",
+    "aiohttp>=3.11.6",
+    "aiofile>=2.0.0",
+    "yapic-json>=1.6.3",
+    "uvloop ; platform_system != 'Windows'",
+    "order-book>=0.6.0",
+    "aiodns>=1.1",  # aiodns speeds up DNS resolving
+]
+
+[project.optional-dependencies]
+arctic = ["arctic", "pandas"]
+gcp_pubsub = ["google-cloud-pubsub>=2.4.1", "gcloud-aio-pubsub"]
+kafka = ["aiokafka>=0.7.0"]
+mongo = ["motor"]
+postgres = ["asyncpg"]
+quasardb = ["quasardb", "numpy"]
+rabbit = ["aio-pika", "pika"]
+redis = ["hiredis", "redis>=4.5.1"]
+zmq = ["pyzmq"]
+all = [
+    "arctic",
+    "google-cloud-pubsub>=2.4.1",
+    "gcloud-aio-pubsub",
+    "aiokafka>=0.7.0",
+    "motor",
+    "asyncpg",
+    "aio-pika",
+    "pika",
+    "hiredis",
+    "redis>=4.5.1",
+    "pyzmq",
+]
+
+[project.urls]
+Homepage = "https://github.com/bmoscon/cryptofeed"
+Repository = "https://github.com/bmoscon/cryptofeed"
+Issues = "https://github.com/bmoscon/cryptofeed/issues"
+
+[build-system]
+requires = ["setuptools>=61", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md", "INSTALL.md", "CHANGES.md"], content-type = "text/markdown"}
+
 [tool.isort]
 # isort formats the import sections
 #
@@ -25,6 +148,8 @@ skip_gitignore = true
 lines_after_imports = 2
 ensure_newline_before_comments = true
 
-
-[build-system]
-requires = ["setuptools", "wheel", "Cython"]
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "pytest",
+]
