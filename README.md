@@ -173,6 +173,10 @@ Run the linter from the repo root:
 
     uv run ruff check .
 
+Run without rebuilding `cryptofeed`:
+
+    uv run --no-sync ruff check .
+
 ## Rest API
 
 Cryptofeed supports some REST interfaces for retrieving real-time and historical data, as well as order placement and account management. These are integrated into the exchange classes directly. You can view the supported methods by calling the `info()` method on any exchange. The methods for interacting with the exchange RET endpoints exist in two flavors, the synchronous methods (suffixed with `_sync`) as well as the asynchronous which can be utilized with asyncio. For more information see the [documentation](docs/rest.md).
