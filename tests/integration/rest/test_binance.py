@@ -60,7 +60,7 @@ class TestBinanceRest:
         assert len(ret) == 3
         assert ret[0] == expected
         assert ret[0]['timestamp'] < ret[-1]['timestamp']
-    
+
     @pytest.mark.xfail(reason="Binance blocks build machine IP ranges. If outside the USA this should pass")
     def test_candles(self):
         expected = Candle(
@@ -83,7 +83,7 @@ class TestBinanceRest:
             ret.extend(data)
 
         assert len(ret) == 1
-        assert ret[0] == expected    
+        assert ret[0] == expected
 
     @pytest.mark.xfail(reason="Binance blocks build machine IP ranges. If outside the USA this should pass")
     def test_bf_trade(self):

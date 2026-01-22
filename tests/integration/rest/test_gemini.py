@@ -20,7 +20,7 @@ def teardown_module(module):
         loop = asyncio.get_running_loop()
     except RuntimeError:
         loop = asyncio.new_event_loop()
-    
+
     loop.run_until_complete(public.shutdown())
     loop.run_until_complete(sandbox.shutdown())
 

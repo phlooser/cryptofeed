@@ -23,7 +23,7 @@ def teardown_module(module):
         loop = asyncio.get_running_loop()
     except RuntimeError:
         loop = asyncio.new_event_loop()
-    
+
     loop.run_until_complete(public.shutdown())
     loop.run_until_complete(sandbox.shutdown())
 
@@ -131,7 +131,7 @@ class TestCoinbaseRest:
         assert order_resp.type == LIMIT
         cancel_resp = sandbox.cancel_order_sync(order_resp.id)
         assert cancel_resp.id == order_resp.id
-        assert cancel_resp.status == CANCELLED     
+        assert cancel_resp.status == CANCELLED
 
 
     @pytest.mark.skipif(sandbox.key_id is None or sandbox.key_secret is None, reason="No api key provided")

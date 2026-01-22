@@ -122,7 +122,7 @@ exclude = ["tests*"]
 readme = {file = ["README.md", "INSTALL.md", "CHANGES.md"], content-type = "text/markdown"}
 
 [tool.ruff]
-exclude = ["tests/*", "docs/*", "*.md", "__init__.py", "cryptofeed/exchanges.py"]
+exclude = ["docs/*", "*.md"]
 line-length = 130
 target-version = "py39"
 respect-gitignore = true
